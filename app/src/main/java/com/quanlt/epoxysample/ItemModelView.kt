@@ -27,7 +27,7 @@ class ItemModelView @JvmOverloads constructor(
 
     @AfterPropsSet
     fun bindModel() {
-        tvTitle.isVisible = !shouldShow
-        tvSubtitle.isVisible = !shouldShow
+        tvTitle.isVisible = shouldShow
+        tvSubtitle.isVisible = shouldShow
     }
 }

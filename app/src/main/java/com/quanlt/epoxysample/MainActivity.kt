@@ -9,7 +9,7 @@ import kotlinx.android.synthetic.main.activity_main.recyclerView
 
 class MainActivity : AppCompatActivity() {
 
-    private var flag = true
+    private var flag = false
     private val list1 =
         listOf(Item(1), Item(2), Item(3), Item(4), Item(5), Item(6), Item(7), Item(8))
     private val list2 = listOf(Item(1), Item(3), Item(4), Item(5), Item(6), Item(7), Item(8))
@@ -21,9 +21,9 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener {
             flag = !flag
             finalList = if (flag) {
-                list1
-            } else {
                 list2
+            } else {
+                list1
             }
             recyclerView.requestModelBuild()
         }
